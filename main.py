@@ -71,3 +71,36 @@ def send_email(subject, mms_subject, body, sender, recipients, password):
     smtp_server.login(sender, password)
     smtp_server.sendmail(sender, recipient, msg.as_string())
 dars_logger.info("Messages sent!")
+
+def calculate_days():
+  today = datetime.date.today()
+  #First NFL season game
+  nfl_season_future = datetime.date(2023, 9, 7)
+  print(nfl_season_future)
+  nfl_season_diff = nfl_season_future - today
+  #Fantasy football
+  fantasy_football_future = datetime.date(2023, 8, 10)
+  print(fantasy_football_future)
+  fantasy_football_diff = fantasy_football_future - today
+  #College football
+  
+  college_football_future = datetime.date(2023,8,26)
+  print(college_football_future)
+  college_football_diff = college_football_future - today
+  # Longhorns
+  longhorn_future = datetime.date(2023,9,1)
+  print(longhorn_future)
+  longhorn_diff = longhorn_future - today
+  # Aggies
+  aggie_future = datetime.date(2023,9,2)
+  print(aggie_future)
+  aggie_diff = aggie_future - today
+  days_until_football =f"""\
+  <html>
+    <head>
+      <title>FANTASY FOOTBALL IS COMING!!!</title>
+    <style>
+      table,tr,th,td {{ border:1px solid black;}}
+    <style>
+    <head>
+    <body>
