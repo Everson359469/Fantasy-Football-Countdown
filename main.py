@@ -104,3 +104,53 @@ def calculate_days():
     <style>
     <head>
     <body>
+      <p><strong><mark><i>FOOTBALL IS COMING!!!!</i></mark></strong><br><br>
+    <table>
+      <tr>
+        <th scope="col" style="text-align: center">League/Team</th>
+        <th scope="col" style="text-align: center">Days Until Season Starts</th>
+      <tr>
+
+      <tr>
+        <td>FF Drafting</td>
+        <td style="text-align: center">{fantasy_football_diff.days}</td>
+      <tr>
+
+      <tr>
+        <td>NFL Season</td>
+        <td style="text-align: center">{nfl_season_diff.days}</td>
+      <tr>
+
+      <tr>
+        <td>College Football</td>
+        <td style="text-align: center">{college_football_diff.days}</td>
+      <tr>
+
+      <tr>
+        <td>t.u. Football</td>
+        <td style="text-align: center">{longhorn_diff.days}</td>
+      <tr>
+
+      <tr>
+        <td>TAMU Football</td>
+        <td style="text-align: center"> {aggie_diff.days}</td>
+      <tr>
+    <table>
+    <p>
+    <body>
+  <html>
+  mms_subject = "FOOTBALL IS COMING!!! NFL season: {} days. FF drafting season: {} days. College
+football: {} days. First t.u. game: {} days.
+First A&M game: {}
+days.".format(nfl_season_diff.days,fantasy_football_diff.days,college_football_diff.days,longhorn_diff.days
+,aggie_diff.days)
+  return (fantasy_football_diff,days_until_football,mms_subject)
+# Email background information
+days_until,body,mms_subject = calculate_days()
+email_subject = "{} Days Until Fantasy Football Season Starts".format(days_until.days)
+sender = "eversonsmith30@gmail.com"
+google_password = "mcglibpvbptmlvow"
+email_recipients = ["tysmith30@gmail.com", "5124619561@mms.att.net", "eversonsmith30@gmail.com",
+"5124848182@mms.att.net", "slsmith30@gmail.com"
+, "5127844931@mms.att.net"]
+send_email(email_subject, mms_subject, body, sender, email_recipients, google_password)
